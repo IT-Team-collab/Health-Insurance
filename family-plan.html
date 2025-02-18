@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Plan - HealthCare Plus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+       /* * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }*/
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        :root {
+            --primary: #093265;
+            --secondary: #4299e1;
+            --accent: #c9fff6;
+            --background: #f7fafc;
+            --text: #2d3748;
+        }
+
+        /*.plan-details {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 2rem;
+        }*/
+
+        .service-category {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .service-category h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            color: var(--primary);
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 2rem auto;
+            width: fit-content;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary);
+        }
+
+        .plans-details {
+            background-image: url('images/plans-bg.jpg');
+            background-position: center;
+            background-size: cover;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="plan-details">
+        <h1>Family Plan Details</h1>
+        <div class="price-tag">$399/month</div>
+
+        <div class="service-category">
+            <h3>All Basic Plan Benefits</h3>
+            <p>Includes all benefits from the Basic Plan, plus enhanced coverage for the whole family:</p>
+            <ul>
+                <li>Lower copays for primary care ($20)</li>
+                <li>Reduced emergency room copay ($100)</li>
+                <li>Enhanced prescription coverage</li>
+                <li>Coverage for up to 6 family members</li>
+            </ul>
+        </div>
+
+        <div class="service-category">
+            <h3>Dental Coverage</h3>
+            <p>Comprehensive dental care for the whole family:</p>
+            <ul>
+                <li>100% coverage for preventive services</li>
+                <li>80% coverage for basic procedures</li>
+                <li>50% coverage for major procedures</li>
+                <li>$1,500 annual maximum per person</li>
+            </ul>
+        </div>
+
+        <div class="service-category">
+            <h3>Vision Coverage</h3>
+            <p>Complete vision care benefits:</p>
+            <ul>
+                <li>Annual eye exam ($20 copay)</li>
+                <li>$150 allowance for frames or contacts</li>
+                <li>Discounted lens options</li>
+                <li>Coverage for children's vision needs</li>
+            </ul>
+        </div>
+
+        <div class="service-category">
+            <h3>Mental Health Services</h3>
+            <p>Comprehensive mental health support:</p>
+            <ul>
+                <li>Individual therapy ($25 copay)</li>
+                <li>Family counseling</li>
+                <li>Virtual mental health visits</li>
+                <li>Substance abuse treatment</li>
+            </ul>
+        </div>
+
+        <a href="HealthInsurance.html#plans" class="btn">Back to Plans</a>
+        <button class="btn" onclick="location.href='enrollment.html'">Enroll Now</button>
+    </div>
+</body>
+</html>
