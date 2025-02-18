@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Plan - HealthCare Plus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        :root {
+            --primary: #093265;
+            --secondary: #4299e1;
+            --accent: #c9fff6;
+            --background: #f7fafc;
+            --text: #2d3748;
+        }
+
+        .plan-details {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 2rem;
+        }
+
+        .service-category {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .service-category h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            color: var(--primary);
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 2rem auto;
+            width: fit-content;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="plan-details">
+        <h1>Premium Plan Details</h1>
+        <div class="price-tag">$599/month</div>
+
+        <div class="service-category">
+            <h3>All Family Plan Benefits</h3>
+            <p>Includes all benefits from the Family Plan, plus premium features:</p>
+            <ul>
+                <li>$0 copay for primary care visits</li>
+                <li>$50 emergency room copay</li>
+                <li>Enhanced prescription coverage with lower copays</li>
+                <li>Increased coverage limits for all services</li>
+            </ul>
+        </div>
+
+        <div class="service-category">
+            <h3>Alternative Medicine</h3>
+            <p>Comprehensive alternative treatment coverage:</p>
+            <ul>
+                <li>Acupuncture sessions</li>
+                <li>Chiropractic care</li>
+                <li>Naturopathic medicine</li>
+                <li>Massage therapy</li>
+            </ul>
+        </div>
+
+        <div class="service-category">
+            <h3>International Coverage</h3>
+            <p>Global healthcare protection:</p>
+            <ul>
+                <li>Emergency medical coverage worldwide</li>
+                <li>International hospital network access</li>
+                <li>Medical evacuation coverage</li>
+                <li>24/7 global assistance hotline</li>
+            </ul>
+        </div>
+
+        <div class="service-category">
+            <h3>Concierge Service</h3>
+            <p>Premium member benefits:</p>
+            <ul>
+                <li>Personal healthcare advocate</li>
+                <li>Priority appointment scheduling</li>
+                <li>Virtual consultations 24/7</li>
+                <li>Wellness program coordination</li>
+            </ul>
+        </div>
+
+        <a href="HealthInsurance.html#plans" class="btn">Back to Plans</a>
+        <button class="btn" onclick="location.href='enrollment.html'">Enroll Now</button>
+    </div>
+</body>
+</html>
