@@ -1,0 +1,110 @@
+<!-- enrollment.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment - HealthCare Plus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="HealthInsurance.html" class="logo">HealthCare Plus</a>
+            <div class="nav-links">
+                <a href="HealthInsurance.html">Home</a>
+                <a href="enrollment.html" class="active">Enrollment</a>
+                <a href="claims.html">Claims</a>
+                <a href="benefits.html">Benefits</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="enrollment-container">
+        <div class="progress-bar">
+            <div class="progress-step active">Personal Info</div>
+            <div class="progress-step">Plan Selection</div>
+            <div class="progress-step">Medical History</div>
+            <div class="progress-step">Review</div>
+        </div>
+
+        <form id="enrollmentForm" class="enrollment-form">
+            <!-- Step 1: Personal Information -->
+            <div class="form-step active" id="step1">
+                <h2>Personal Information</h2>
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <button type="button" class="btn next-btn" onclick="nextStep()">Next</button>
+            </div>
+
+            <!-- Additional steps will be shown/hidden via JavaScript -->
+        </form>
+    </div>
+    <script>
+        let currentStep = 1;
+        const totalSteps = 4;
+
+        function nextStep() {
+            if (validateCurrentStep()) {
+                if (currentStep < totalSteps) {
+                    document.getElementById(`step${currentStep}`).classList.remove('active');
+                    currentStep++;
+                    document.getElementById(`step${currentStep}`).classList.add('active');
+                    updateProgressBar();
+                }
+            }
+        }
+
+        function previousStep() {
+            if (currentStep > 1) {
+                document.getElementById(`step${currentStep}`).classList.remove('active');
+                currentStep--;
+                document.getElementById(`step${currentStep}`).classList.add('active');
+                updateProgressBar();
+            }
+        }
+
+        function updateProgressBar() {
+            const steps = document.querySelectorAll('.progress-step');
+            steps.forEach((step, index) => {
+                if (index < currentStep) {
+                    step.classList.add('active');
+                } else {
+                    step.classList.remove('active');
+                }
+            });
+        }
+
+        function validateCurrentStep() {
+            const currentStepElement = document.getElementById(`step${currentStep}`);
+            const inputs = currentStepElement.querySelectorAll('input[required], select[required]');
+            let valid = true;
+
+            inputs.forEach(input => {
+                if (!input.value) {
+                    valid = false;
+                    input.classList.add('error');
+                } else {
+                    input.classList.remove('error');
+                }
+            });
+
+            return valid;
+        }
+    </script>
+</body>
+</html>
