@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File a Claim - HealthCare Plus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="HealthInsurance.html" class="logo">HealthCare Plus</a>
+            <div class="nav-links">
+                <a href="HealthInsurance.html">Home</a>
+                <a href="enrollment.html">Enrollment</a>
+                <a href="claims.html" class="active">Claims</a>
+                <a href="benefits.html">Benefits</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="claims-container">
+        <h1>File a New Claim</h1>
+        
+        <form id="claimForm" class="claim-form">
+            <div class="form-group">
+                <label for="serviceDate">Date of Service</label>
+                <input type="date" id="serviceDate" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="providerName">Provider Name</label>
+                <input type="text" id="providerName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="claimType">Type of Service</label>
+                <select id="claimType" required>
+                    <option value="">Select service type</option>
+                    <option value="medical">Medical Visit</option>
+                    <option value="prescription">Prescription</option>
+                    <option value="dental">Dental</option>
+                    <option value="vision">Vision</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="amount">Amount Claimed ($)</label>
+                <input type="number" id="amount" min="0" step="0.01" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="documents">Upload Supporting Documents</label>
+                <input type="file" id="documents" multiple accept=".pdf,.jpg,.png">
+                <div class="upload-info">Accepted formats: PDF, JPG, PNG</div>
+            </div>
+            
+            <button type="submit" class="btn submit-btn">Submit Claim</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('claimForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Collect form data
+        const formData = new FormData(this);
+        
+        // Here you would typically send the data to a server
+        console.log('Claim submitted:', Object.fromEntries(formData));
+        
+        // Show success message
+        alert('Claim submitted successfully!');
+        this.reset();
+        });
+    </script>
+</body>
+</html>
