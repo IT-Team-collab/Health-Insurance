@@ -1,0 +1,80 @@
+<!-- benefits.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefits Dashboard - HealthCare Plus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="HealthInsurance.html" class="logo">HealthCare Plus</a>
+            <div class="nav-links">
+                <a href="HealthInsurance.html">Home</a>
+                <a href="enrollment.html">Enrollment</a>
+                <a href="claims.html">Claims</a>
+                <a href="benefits.html" class="active">Benefits</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="benefits-container">
+        <h1>Your Benefits Dashboard</h1>
+        
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Plan Information</h3>
+                <div class="plan-details">
+                    <p><strong>Plan Type:</strong> Family Premium</p>
+                    <p><strong>Status:</strong> Active</p>
+                    <p><strong>Effective Date:</strong> 01/01/2024</p>
+                    <p><strong>Member ID:</strong> 123456789</p>
+                </div>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Deductible Progress</h3>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%"></div>
+                    </div>
+                    <p>$1,300 of $2,000</p>
+                </div>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>Recent Claims</h3>
+                <div class="claims-list">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+        document.addEventListener('DOMContentLoaded', function(){
+        // Sample data - would typically come from an API
+        const recentClaims = [
+            { date: '2024-02-01', type: 'Medical Visit', amount: 120, status: 'Pending' },
+            { date: '2024-01-28', type: 'Prescription', amount: 45, status: 'Approved' },
+            { date: '2024-01-15', type: 'Lab Tests', amount: 250, status: 'Processing' }
+        ];
+
+        const claimsList = document.querySelector('.claims-list');
+        
+        recentClaims.forEach(claim => {
+            const claimElement = document.createElement('div');
+            claimElement.className = 'claim-item';
+            claimElement.innerHTML = `
+                <div class="claim-date">${new Date(claim.date).toLocaleDateString()}</div>
+                <div class="claim-type">${claim.type}</div>
+                <div class="claim-amount">$${claim.amount}</div>
+                <div class="claim-status ${claim.status.toLowerCase()}">${claim.status}</div>
+            `;
+            claimsList.appendChild(claimElement);
+        });
+        });
+    </script>
+</body>
+</html>
