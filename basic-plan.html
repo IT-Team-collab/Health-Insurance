@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Plan - HealthCare Plus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        :root {
+            --primary: #093265;
+            --secondary: #4299e1;
+            --accent: #c9fff6;
+            --background: #f7fafc;
+            --text: #2d3748;
+        }
+
+        .plan-details {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 2rem;
+        }
+
+        .service-category {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .service-category h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .price-tag {
+            font-size: 2.5rem;
+            color: var(--primary);
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: block;
+            margin: 2rem auto;
+            width: fit-content;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="plan-details">
+        <h1>Basic Plan Details</h1>
+        <div class="price-tag">$199/month</div>
+
+        <div class="service-category">
+            <h3>Primary Care Coverage</h3>
+            <p>Covers regular check-ups and visits to your primary care physician with a $25 copay per visit. Includes:</p>
+            <ul>
+                <li>Annual physical examinations</li>
+                <li>Basic health screenings</li>
+                <li>Vaccinations and immunizations</li>
+                <li>Treatment for common illnesses</li>
+            </ul>
+        </div>
+
+        <div class="service-category">
+            <h3>Emergency Services</h3>
+            <p>Comprehensive emergency care coverage with a $150 copay per emergency room visit. Includes:</p>
+            <ul>
+                <li>24/7 emergency room access</li>
+                <li>Ambulance services</li>
+                <li>Urgent care visits ($50 copay)</li>
+                <li>Emergency surgical procedures</li>
+            </ul>
+        </div>
+
+        <div class="service-category">
+            <h3>Prescription Drug Coverage</h3>
+            <p>Three-tier prescription drug coverage system:</p>
+            <ul>
+                <li>Generic medications: $10 copay</li>
+                <li>Preferred brand medications: $30 copay</li>
+                <li>Non-preferred brand medications: $50 copay</li>
+                <li>90-day supply available for maintenance medications</li>
+            </ul>
+        </div>
+
+        <div class="service-category">
+            <h3>Preventive Care</h3>
+            <p>100% coverage for preventive services with no copay. Includes:</p>
+            <ul>
+                <li>Annual wellness visits</li>
+                <li>Routine blood work</li>
+                <li>Cancer screenings</li>
+                <li>Blood pressure monitoring</li>
+            </ul>
+        </div>
+
+        <a href="HealthInsurance.html#plans" class="btn">Back to Plans</a>
+        <button class="btn" onclick="location.href='enrollment.html'">Enroll Now</button>
+    </div>
+</body>
+</html>
